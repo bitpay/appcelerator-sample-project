@@ -1,4 +1,4 @@
-##BitPay Sample Appcelerator App
+## BitPay Sample Appcelerator App
 
 This app requires the following
 
