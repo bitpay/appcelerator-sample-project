@@ -1,12 +1,6 @@
 var win;
-var dev = true;
-if (dev) {
-    var BitPay = require('lib/bitpay');
+var BitPay = require('bitpay');
 
-} else {
-    var BitPay = require('bitpay');
-
-}
 
 
 BitPay.configure()
