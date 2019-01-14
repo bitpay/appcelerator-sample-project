@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+'use strict';
+
+
+Ti.API.info(Ti.App.name+' '+Ti.App.version+' (Powered by Titanium '+Ti.version+'.'+Ti.buildHash+')'),
+
+
+require('./ti.internal/extensions/Error'),
+
+
+
+require('./ti.internal/bootstrap.loader').loadAsync(function(){
+
+
+require('./app');
+});

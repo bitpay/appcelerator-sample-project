@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=bitpay_mobile_client
+iosLaunchConfigurationAttributes/ATTR_UPLOAD_DEBUG_SYMBOLS=false
+iosLaunchConfigurationAttributes/appid=com.b3.bitpay.appc
+iosLaunchConfigurationAttributes/certificate=josh.lewis@gmail.com (7EGPTF76VT)
+iosLaunchConfigurationAttributes/keychain=/Users/josh/Library/Keychains/login.keychain-db
+iosLaunchConfigurationAttributes/sdk_version=12.1
+iosLaunchConfigurationAttributes/uuid=72ffd1f6-1cd0-4f8d-8800-e1e07cdb73ee

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.b3.bitpay.appc</id>
+    <name>BitPay API</name>
+    <version>1.0.1.5</version>
+    <publisher>josh</publisher>
+    <url>http://b3systemsllc.com/bitpay</url>
+    <description>BitPay API Payment Module</description>
+    <copyright>2019 by josh</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>e8de982d-8e28-4f5c-9ddd-56fb44d00646</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <property name="run-on-main-thread" type="bool">true</property>
+    <ios>
+        <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+        <default-background-color>#000</default-background-color>
+        <use-app-thinning>true</use-app-thinning>
+        <plist>
+            <dict>
+                <key>ITSAppUsesNonExemptEncryption</key>
+                <false/>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleLightContent</string>
+                <key>LSApplicationQueriesSchemes</key>
+                <array>
+                    <string>bitcoin</string>
+                </array>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <modules/>
+    <deployment-targets>
+        <target device="android">true</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+    </deployment-targets>
+    <sdk-version>7.5.0.GA</sdk-version>
+    <property name="appc-app-id" type="string">5c362893e20bec4e1e92ef07</property>
+    <property name="bitpayapi" type="string">http://b3systemsllc.com/bitpay/api.php</property>
+    <property name="bitpayapikey" type="string">Ypv4XdtQ35usY1L7I5aT2CY9tGFDWYyY</property>
+    <property name="bitpaycurrency" type="string">USD</property>
+</ti:app>

@@ -1,0 +1,218 @@
+function BitPay(){
+
+}
+BitPay.prototype.init=function(){},
+
+
+BitPay.configure=function(config){
+config==void 0?(
+
+
+
+
+
+this.API_URL=Ti.App.Properties.getString('bitpayapi'),
+this.API_KEY=Ti.App.Properties.getString('bitpayapikey'),
+this.API_CURRENCY=Ti.App.Properties.getString('bitpaycurrency')):(this.API_URL=config.API_URL,this.API_KEY=config.API_KEY,this.API_CURRENCY=config.API_CURRENCY);
+
+},
+
+BitPay.createButton=function(){
+var btn=Titanium.UI.createImageView({
+top:10,
+width:'30%',
+image:'/images/bitpaybutton.png'});
+
+return btn;
+},
+
+BitPay.getCurrency=function(){
+return this.API_CURRENCY;
+},
+
+BitPay.getAPIKey=function(){
+return this.API_KEY;
+},
+
+BitPay.getAPI=function(){
+return this.API_URL;
+},
+
+BitPay.remote=function(method,url){
+var xhr_remote=Titanium.Network.createHTTPClient({
+validatesSecureCertificate:!0});
+
+
+return xhr_remote.open(method,url),xhr_remote;
+
+},
+
+BitPay.sendTransaction=function(item){var
+
+that=this,
+xhr=this.remote('POST',this.getAPI());
+item.currency=this.getCurrency(),
+item.app_api_key=this.getAPIKey(),
+xhr.send(item),
+xhr.onerror=function(){
+var errd=Titanium.UI.createAlertDialog({
+title:'Error',
+message:this.responseText,
+buttonNames:['OK']});
+
+errd.show();
+},
+
+xhr.onload=function(){
+var response=JSON.parse(this.responseText);
+if('success'==response.status)
+that.isAndroid()?
+that.showAndroidModal(response):
+
+that.showIOSModal(response);else
+
+{
+var errd=Titanium.UI.createAlertDialog({
+title:'Error',
+message:response.msg,
+buttonNames:['OK']});
+
+errd.show();
+}
+};
+},
+
+
+BitPay.showAndroidModal=function(obj){
+Titanium.Platform.openURL(obj.invoice_url);
+},
+
+BitPay.showIOSModal=function(obj){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function checkInvoiceStatus(){
+
+var bpstring=bitpayWebview.html.toString();
+console.log('here');
+var pos=bpstring.indexOf('This invoice has been paid.');
+-1!=pos&&
+
+stopInvoiceStatus();
+
+
+
+}
+
+function stopInvoiceStatus(){
+console.log('FOUND LETS CLOSE'),
+
+clearInterval(invoiceResponse);
+var cartMsg=Titanium.UI.createAlertDialog({
+title:'Transaction Complete',
+message:'Thank you for your purchase.  Please check your email for details.',
+buttonNames:['OK']});
+
+cartMsg.show(),
+cartMsg.addEventListener('click',function(){
+bitpayWebwin.close();
+});
+
+
+}var bitpayWebview=Titanium.UI.createWebView({url:obj.invoice_url});console.log('bitpayWebview.url',bitpayWebview.url);var bitpayWebwin=Titanium.UI.createWindow({top:20,backgroundColor:'#5E7DE4',layout:'vertical'}),headerView=Titanium.UI.createView({height:40,left:0,right:0,backgroundColor:'#0A2047'});bitpayWebwin.add(headerView);var closeLbl=Titanium.UI.createLabel({left:20,color:'#fff',text:'Close'});headerView.add(closeLbl);var transLbl=Titanium.UI.createLabel({right:10,color:'#fff',font:{fontSize:12},text:obj.invoice_id});headerView.add(transLbl),closeLbl.addEventListener('click',function(){bitpayWebwin.close()}),bitpayWebwin.add(bitpayWebview),bitpayWebwin.open({modal:!0}),bitpayWebwin.addEventListener('close',function(){clearInterval(invoiceResponse)});var invoiceResponse=setInterval(checkInvoiceStatus,3e3);
+
+
+
+
+
+
+
+},
+
+
+
+BitPay.isAndroid=function(){var
+isAndroid=!1,
+isIOS=!1,
+isSimulator=!1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return'Simulator'==Titanium.Platform.model&&(isSimulator=!0),'android'==Titanium.Platform.osname&&(isAndroid=!0,isIphone=!1,isIphone5=!1,isIpad=!1),('iphone'==Titanium.Platform.osname||'ipad'==Titanium.Platform.osname)&&(isIOS=!0,isAndroid=!1,isIphone=!1,isIpad=!0),'iphone'==Titanium.Platform.osname&&(isAndroid=!1,isIphone=!0,isIpad=!1),'ipad'==Titanium.Platform.osname&&(isAndroid=!1,isIphone=!1,isIpad=!0),isAndroid;
+},
+
+module.exports=BitPay;
