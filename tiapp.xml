@@ -56,7 +56,7 @@
         <target device="iphone">true</target>
     </deployment-targets>
     <sdk-version>7.5.0.GA</sdk-version>
-    <property name="appc-app-id" type="string">5c362893e20bec4e1e92ef07</property>
+    <property name="appc-app-id" type="string">api key</property>
     <property name="bitpayapidev" type="string">http://test.bitpay.com</property>
     <property name="bitpayapiprod" type="string">https://www.bitpay.com</property>
     <property name="bitpayapikey" type="string">2iwV59dgm6gcQUcUzwgaYL</property>
