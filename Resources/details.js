@@ -1,9 +1,9 @@
 var win;
-var BitPay = require('bitpay');
+var BitPay = require('lib/bitpay');
 
-
-
-BitPay.configure()
+BitPay.configure({
+		ENV:'dev'
+	})
 
 exports.getMain = function (obj) {
     win = Titanium.UI.createWindow({

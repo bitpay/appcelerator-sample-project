@@ -1,5 +1,4 @@
 var win;
-
 exports.getMain = function () {
 
     win = Titanium.UI.createWindow({
