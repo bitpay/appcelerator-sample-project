@@ -10,7 +10,6 @@ var tabGroup = Titanium.UI.createTabGroup();
 var win = require('main.js').getMain();
 
 var tab1 = Titanium.UI.createTab({
-	title: 'Tab 1',
 	window: win
 });
 tabGroup.bottom = -100;

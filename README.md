@@ -14,7 +14,8 @@ The following parameters are used by the module.
 ```
 <property name="bitpayapidev" type="string">https://test.bitpay.com</property>
 <property name="bitpayapiprod" type="string">https://www.bitpay.com</property>
-<property name="bitpayapikey" type="string"><your api key></property>
+<property name="bitpayapikeydev" type="string"><your api key></property>
+<property name="bitpayapikeyprod" type="string"><your api key></property>
 <property name="bitpaycurrency" type="string"><currency to use></property>
 ```
 
@@ -25,8 +26,27 @@ var item = {
         'sku': '<sku>',
         'description': <product description>,
         'price': parseFloat(<price of item>),
-        'buyer_email': '<buyers email>'
     }
 ```
+
+# Module Usage
+
+Add **bitpay.js** to your **lib** folder
+
+Include and initialize, setting **ENV** to *dev* or *prod*
+
+```
+var BitPay = require('lib/bitpay');
+BitPay.configure({
+    ENV: 'dev'
+})
+```
+
+Use the button logic starting at line 134 and pass to the *doCheckout* function (or create your own)
+
+Modify the text/buttons as needed.
+
+# This is a sample app, feel free to fork and submit suggestions/PR requests
+
 
 
