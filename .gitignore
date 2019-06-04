@@ -2,3 +2,5 @@ build
 Resources/lib/bitpay.js
 Resources/.DS_Store
 .DS_Store
+ios_device.sh
+ios_sim.sh

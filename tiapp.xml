@@ -59,6 +59,7 @@
     <property name="appc-app-id" type="string">api key</property>
     <property name="bitpayapidev" type="string">http://test.bitpay.com</property>
     <property name="bitpayapiprod" type="string">https://www.bitpay.com</property>
-    <property name="bitpayapikey" type="string">2iwV59dgm6gcQUcUzwgaYL</property>
+    <property name="bitpayapikeydev" type="string">2iwV59dgm6gcQUcUzwgaYL</property>
+    <property name="bitpayapikeyprod" type="string">2iwV59dgm6gcQUcUzwgaYL</property>
     <property name="bitpaycurrency" type="string">USD</property>
 </ti:app>
